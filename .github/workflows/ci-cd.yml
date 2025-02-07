@@ -51,7 +51,7 @@ jobs:
             host: ${{secrets.AWS_EC2_HOST}}
             username: ${{secrets.AWS_EC2_USER}}
             key: ${{secrets.AWS_EC2_KEY}}
-            passphrase: ${{ secrets.SSH_PASSPHRASE }}
+            passphrase: ${{ secrets.SSH_PASSPHRASE}}
             script: |
                 docker pull ${{secrets.DOCKER_USERNAME}}/spring-app2:${{github.sha}}
                 docker stop spring-app2 || true
